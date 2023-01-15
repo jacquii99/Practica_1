@@ -60,6 +60,12 @@ clean:
 ${COMPILER}:
 	@mkdir -p ${COMPILER}
 
+#reglas de reconstrucción 
+#
+debug: CFLAGS+=-g -D DEBUG
+debug: ${COMPILER}
+debug: ${COMPILER}/blinky.axf
+
 #
 # Rules for building the blinky example.
 #
